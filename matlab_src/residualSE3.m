@@ -1,5 +1,4 @@
 function sol = residualSE3(v0, v, h, f, action, method)
-
 % RHS of the system
 %
 % :param v0: initial condition

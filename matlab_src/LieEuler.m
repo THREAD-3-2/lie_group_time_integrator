@@ -1,5 +1,4 @@
 function sol = LieEuler(vector_field, action, expMap, initial_condition, h)
-
 % Lie Forward Euler time integrator
 %
 % :param vector_field: right hand side of the ODE

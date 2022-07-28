@@ -1,5 +1,4 @@
 function rslt = expSE3(input)
-
 % exponential map on the SE3 group
 %
 % :param input: element of the Lie algebra se3

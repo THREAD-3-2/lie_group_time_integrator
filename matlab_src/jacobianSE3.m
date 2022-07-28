@@ -1,5 +1,4 @@
 function sol = jacobianSE3(v0, v, h, f, action, method)
-
 % Jacobian of the system
 %
 % :param v0: initial condition

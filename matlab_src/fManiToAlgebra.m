@@ -1,5 +1,4 @@
 function F = fManiToAlgebra(y, damp, k)
-
 % RHS of the mathematical pendulum
 %
 % :param y: generalized coordinates

@@ -1,5 +1,4 @@
 function [q0, w0, z0] = initializeSE3()
-
 % Initialization in SE3
 %
 % :returns: normalized verctor in R3

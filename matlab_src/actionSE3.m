@@ -1,5 +1,4 @@
 function res = actionSE3(A, v)
-
 % action on the SE3 group
 %
 % :param B: element of the Lie group SE3
