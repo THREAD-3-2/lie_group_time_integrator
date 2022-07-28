@@ -5,7 +5,7 @@
 =============
 
 matlab_src
-========
+===========
 
 .. mat:automodule:: matlab_src
 
@@ -20,7 +20,7 @@ implementing Lie group time integrators
 The module further contains an example script and related functions:
 
 .. mat:autoscript:: matlab_src.main
-.. mat:autoscript:: matlab_src.fManiToAlgebra
-.. mat:autoscript:: matlab_src.initializeSE3
-.. mat:autoscript:: matlab_src.residualSE3
-.. mat:autoscript:: matlab_src.jacobianSE3
+.. mat:autofunction:: matlab_src.fManiToAlgebra
+.. mat:autofunction:: matlab_src.initializeSE3
+.. mat:autofunction:: matlab_src.residualSE3
+.. mat:autofunction:: matlab_src.jacobianSE3
