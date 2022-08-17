@@ -40,8 +40,14 @@
 <p><code class="xref py py-mod docutils literal notranslate"><span class="pre">src</span></code> module contains some functions
 implementing Lie group time integrators</p>
 <dl class="mat function">
+<dt class="sig sig-object mat" id="src.main">
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Damped Spherical Pendulum solved with Lie groups time integrator</p>
+</dd></dl>
+
+<dl class="mat script">
 <dt class="sig sig-object mat" id="src.LieEuler">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">LieEuler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vector_field</span></em>, <em class="sig-param"><span class="pre">action</span></em>, <em class="sig-param"><span class="pre">expMap</span></em>, <em class="sig-param"><span class="pre">initial_condition</span></em>, <em class="sig-param"><span class="pre">h</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.LieEuler" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">LieEuler</span></span><a class="headerlink" href="#src.LieEuler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lie Forward Euler time integrator</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -59,9 +65,9 @@ implementing Lie group time integrators</p>
 </dl>
 </dd></dl>
 
-<dl class="mat function">
+<dl class="mat script">
 <dt class="sig sig-object mat" id="src.actionSE3">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">actionSE3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">A</span></em>, <em class="sig-param"><span class="pre">v</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.actionSE3" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">actionSE3</span></span><a class="headerlink" href="#src.actionSE3" title="Permalink to this definition">¶</a></dt>
 <dd><p>action on the SE3 group</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -76,9 +82,9 @@ implementing Lie group time integrators</p>
 </dl>
 </dd></dl>
 
-<dl class="mat function">
+<dl class="mat script">
 <dt class="sig sig-object mat" id="src.expSE3">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">expSE3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">input</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.expSE3" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">expSE3</span></span><a class="headerlink" href="#src.expSE3" title="Permalink to this definition">¶</a></dt>
 <dd><p>exponential map on the SE3 group</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -91,9 +97,9 @@ implementing Lie group time integrators</p>
 </dd></dl>
 
 <p>A function implements the Newton-Raphson algorithm for implicit methods:</p>
-<dl class="mat function">
+<dl class="mat script">
 <dt class="sig sig-object mat" id="src.NewtonRaphson">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">NewtonRaphson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">residual</span></em>, <em class="sig-param"><span class="pre">jacobian</span></em>, <em class="sig-param"><span class="pre">initial_condition</span></em>, <em class="sig-param"><span class="pre">h</span></em>, <em class="sig-param"><span class="pre">max_it</span></em>, <em class="sig-param"><span class="pre">atol</span></em>, <em class="sig-param"><span class="pre">rtol</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.NewtonRaphson" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">NewtonRaphson</span></span><a class="headerlink" href="#src.NewtonRaphson" title="Permalink to this definition">¶</a></dt>
 <dd><p>Newton-Raphson scheme to solve the dEL equations</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -115,14 +121,8 @@ implementing Lie group time integrators</p>
 
 <p>The module further contains an example script and related functions:</p>
 <dl class="mat script">
-<dt class="sig sig-object mat" id="src.main">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">main</span></span><a class="headerlink" href="#src.main" title="Permalink to this definition">¶</a></dt>
-<dd><p>Damped Spherical Pendulum solved with Lie groups time integrator</p>
-</dd></dl>
-
-<dl class="mat function">
 <dt class="sig sig-object mat" id="src.fManiToAlgebra">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">fManiToAlgebra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">y</span></em>, <em class="sig-param"><span class="pre">damp</span></em>, <em class="sig-param"><span class="pre">k</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.fManiToAlgebra" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">fManiToAlgebra</span></span><a class="headerlink" href="#src.fManiToAlgebra" title="Permalink to this definition">¶</a></dt>
 <dd><p>RHS of the mathematical pendulum</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -138,9 +138,9 @@ implementing Lie group time integrators</p>
 </dl>
 </dd></dl>
 
-<dl class="mat function">
+<dl class="mat script">
 <dt class="sig sig-object mat" id="src.initializeSE3">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">initializeSE3</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.initializeSE3" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">initializeSE3</span></span><a class="headerlink" href="#src.initializeSE3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialization in SE3</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -151,9 +151,9 @@ implementing Lie group time integrators</p>
 concatenation of the two</p>
 </dd></dl>
 
-<dl class="mat function">
+<dl class="mat script">
 <dt class="sig sig-object mat" id="src.residualSE3">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">residualSE3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">v0</span></em>, <em class="sig-param"><span class="pre">v</span></em>, <em class="sig-param"><span class="pre">h</span></em>, <em class="sig-param"><span class="pre">f</span></em>, <em class="sig-param"><span class="pre">action</span></em>, <em class="sig-param"><span class="pre">method</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.residualSE3" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">residualSE3</span></span><a class="headerlink" href="#src.residualSE3" title="Permalink to this definition">¶</a></dt>
 <dd><p>RHS of the system</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -172,9 +172,9 @@ concatenation of the two</p>
 </dl>
 </dd></dl>
 
-<dl class="mat function">
+<dl class="mat script">
 <dt class="sig sig-object mat" id="src.jacobianSE3">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">jacobianSE3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">v0</span></em>, <em class="sig-param"><span class="pre">v</span></em>, <em class="sig-param"><span class="pre">h</span></em>, <em class="sig-param"><span class="pre">f</span></em>, <em class="sig-param"><span class="pre">action</span></em>, <em class="sig-param"><span class="pre">method</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.jacobianSE3" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">jacobianSE3</span></span><a class="headerlink" href="#src.jacobianSE3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Jacobian of the system</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
