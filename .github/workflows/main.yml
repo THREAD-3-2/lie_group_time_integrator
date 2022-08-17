@@ -23,16 +23,10 @@ jobs:
         python-version: "3.x"
         cache: 'pip'
     - run: pip install -r requirements.txt
-    # Run pytest
-    - name: Run test suite
-      run: |
-        pytest
-        pytest --mypy
     # Run Sphinx
     - name: Build documentation (and run doctests)
       run: |
         cd docs/
-        make doctest
         make html
     # Upload html to gh-pages branch (where I manually committed a .nojekyll file)
     - name: Deploy documentation on GitHub Pages

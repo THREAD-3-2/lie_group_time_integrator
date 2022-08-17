@@ -4,23 +4,32 @@
  MATLAB code
 =============
 
-matlab_src
+src
 ===========
 
-.. mat:automodule:: matlab_src
+.. mat:automodule:: src
 
-:mod:`matlab_src` module contains some functions
+:mod:`src` module contains some functions
 implementing Lie group time integrators
     
-.. mat:autofunction:: matlab_src.LieEuler
-.. mat:autofunction:: matlab_src.NewtonRaphson
-.. mat:autofunction:: matlab_src.actionSE3
-.. mat:autofunction:: matlab_src.expSE3
+.. mat:autofunction:: src.LieEuler
 
+.. mat:autofunction:: src.actionSE3
+
+.. mat:autofunction:: src.expSE3
+
+A function implements the Newton-Raphson algorithm for implicit methods:
+
+.. mat:autofunction:: src.NewtonRaphson
+    
 The module further contains an example script and related functions:
 
-.. mat:autoscript:: matlab_src.main
-.. mat:autofunction:: matlab_src.fManiToAlgebra
-.. mat:autofunction:: matlab_src.initializeSE3
-.. mat:autofunction:: matlab_src.residualSE3
-.. mat:autofunction:: matlab_src.jacobianSE3
+.. mat:autoscript:: src.main
+
+.. mat:autofunction:: src.fManiToAlgebra
+
+.. mat:autofunction:: src.initializeSE3
+
+.. mat:autofunction:: src.residualSE3
+
+.. mat:autofunction:: src.jacobianSE3
