@@ -1,7 +1,7 @@
 function res = actionSE3(A, v)
 % action on the SE3 group
 %
-% :param B: element of the Lie group SE3
+% :param A: element of the Lie group SE3
 % :param v: element of the Lie algebra se3
 %
 % :returns: element of the Lie algebra se3
