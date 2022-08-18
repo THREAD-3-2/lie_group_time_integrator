@@ -12,7 +12,9 @@ The equations in this case are:
 .. math::
 
     \begin{align}
+        \label{qdot}   
         \dot{q} & =  \omega\times q \\
+        \label{wdot}
         \dot{\omega} & = ge_3\times q,
     \end{align}
 
