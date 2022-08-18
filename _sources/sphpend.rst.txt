@@ -32,7 +32,7 @@ This is a mechanical system with preserved energy:
         E(q,\omega) = \tfrac12 |\omega\times q|^2 + g\langle e_3, q\rangle.
     \end{align}
 
-We then slightly modify the system by adding two terms in :ref:`Link title <eq:1>` and obtain the new equations:
+We then slightly modify the system by adding two terms in :ref:`Equation (1) <eq:1>` and obtain the new equations:
 
 .. math::
 
