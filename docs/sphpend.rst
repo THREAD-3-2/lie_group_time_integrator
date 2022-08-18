@@ -10,17 +10,16 @@ We limit ourselves to the case of a single spherical pendulum.
 The equations in this case are:
 
 .. math::
-
     :name: eq:0
     \begin{align}
-        \dot{q} & =  \omega\times q
+        \dot{q}  =  \omega\times q
     \end{align}
 
 .. math::
 
     :name: eq:1
     \begin{align}
-        \dot{\omega} & = ge_3\times q,
+        \dot{\omega}  = ge_3\times q,
     \end{align}
 
 where :math:`q \in S^2` and :math:`\omega \in T_{q}S^2` denote the position and the angular velocity, respectively.  :math:`g` denotes the gravitational constant and :math:`e_3 = [0, 0, 1]^{\top}.`
