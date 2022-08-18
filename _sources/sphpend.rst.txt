@@ -11,13 +11,14 @@ The equations in this case are:
 
 .. math::
     :name: eq:0
+
     \begin{align}
         \dot{q}  =  \omega\times q
     \end{align}
 
 .. math::
-
     :name: eq:1
+    
     \begin{align}
         \dot{\omega}  = ge_3\times q,
     \end{align}

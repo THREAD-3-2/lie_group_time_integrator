@@ -40,9 +40,12 @@
 <p>We consider the Lie group setting as in the paper by Elena Celledoni, Ergys Çokaj, Andrea Leone, Davide Murari and Brynjulf Owren, “Lie group integrators for mechanical systems”, International Journal of Computer Mathematics, 99:1, 58-88.
 We limit ourselves to the case of a single spherical pendulum.
 The equations in this case are:</p>
-<div class="math notranslate nohighlight">
-\[:name: eq:1
-\begin{align}
+<div class="math notranslate nohighlight" id="eq-0">
+<span id="equation-eq-0"></span><span class="eqno">(1)<a class="headerlink" href="#eq-0" title="Permalink to this equation">¶</a></span>\[\begin{align}
+    \dot{q}  =  \omega\times q
+\end{align}\]</div>
+<div class="math notranslate nohighlight" id="eq-1">
+<span id="equation-eq-1"></span><span class="eqno">(2)<a class="headerlink" href="#eq-1" title="Permalink to this equation">¶</a></span>\[\begin{align}
     \dot{\omega}  = ge_3\times q,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(q \in S^2\)</span> and <span class="math notranslate nohighlight">\(\omega \in T_{q}S^2\)</span> denote the position and the angular velocity, respectively.  <span class="math notranslate nohighlight">\(g\)</span> denotes the gravitational constant and <span class="math notranslate nohighlight">\(e_3 = [0, 0, 1]^{\top}.\)</span>
@@ -51,7 +54,7 @@ This is a mechanical system with preserved energy:</p>
 \[\begin{align}
     E(q,\omega) = \tfrac12 |\omega\times q|^2 + g\langle e_3, q\rangle.
 \end{align}\]</div>
-<p>We then slightly modify the system by adding two terms in <span class="xref std std-ref">Link title</span> and obtain the new equations:</p>
+<p>We then slightly modify the system by adding two terms in <a class="reference internal" href="#eq-1"><span class="std std-ref">Link title</span></a> and obtain the new equations:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}
     \dot{q} &amp; =  \omega\times q \\
