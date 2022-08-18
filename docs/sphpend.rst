@@ -10,14 +10,14 @@ We limit ourselves to the case of a single spherical pendulum.
 The equations in this case are:
 
 .. math::
-    :name: eq:0
+    :name: eq:1
 
     \begin{align}
         \dot{q}  =  \omega\times q
     \end{align}
 
 .. math::
-    :name: eq:1
+    :name: eq:2
     
     \begin{align}
         \dot{\omega}  = ge_3\times q,
@@ -32,7 +32,7 @@ This is a mechanical system with preserved energy:
         E(q,\omega) = \tfrac12 |\omega\times q|^2 + g\langle e_3, q\rangle.
     \end{align}
 
-We then slightly modify the system by adding two terms in :ref:`Equation (1) <eq:1>` and obtain the new equations:
+We then slightly modify the system by adding two terms in :ref:`Equation (1) <eq:2>` and obtain the new equations:
 
 .. math::
 
