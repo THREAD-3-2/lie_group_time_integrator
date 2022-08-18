@@ -13,6 +13,7 @@ Contents
 .. toctree::
    installation
    matlab
+   problem_description
    :maxdepth: 2
 
 
