@@ -12,9 +12,9 @@ The equations in this case are:
 .. math::
 
     \begin{align}
-        \label{qdot}   
+        :name: eq:0
         \dot{q} & =  \omega\times q \\
-        \label{wdot}
+        :name: eq:1
         \dot{\omega} & = ge_3\times q,
     \end{align}
 
@@ -27,7 +27,7 @@ This is a mechanical system with preserved energy:
         E(q,\omega) = \tfrac12 |\omega\times q|^2 + g\langle e_3, q\rangle.
     \end{align}
 
-We then slightly modify the system by adding two terms in :math:`\eqref{wdot}` and obtain the new equations:
+We then slightly modify the system by adding two terms in :ref:`Link title <eq:1>` and obtain the new equations:
 
 .. math::
 
