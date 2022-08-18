@@ -20,5 +20,5 @@ Indices and tables
 ==================
 
 * :ref:`genindex`
-`MATLAB Module Index <mat-modindex.html>`_
+* `Module Index <mat-modindex.html>`_
 * :ref:`search`
