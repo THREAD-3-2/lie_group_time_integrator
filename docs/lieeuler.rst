@@ -24,10 +24,10 @@ The method can be express by the formula:
 .. math::
 
     \begin{align}
-        y_{n+1} = \exp{hf(y_{n})}\circ y_{n}
+        y_{n+1} = \exp{(hf(y_{n}))}\circ y_{n}
     \end{align}
 
-where :math:`exp` and :math:`\circ` are respectively the exponential map and the action on the considered Lie group.
+where :math:`\exp` and :math:`\circ` are respectively the exponential map and the action on the considered Lie group.
 
 .. _riemannianDistance:
 
