@@ -17,6 +17,8 @@
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="MATLAB code" href="matlab.html" />
+    <link rel="prev" title="The spherical pendulum: description of the problem" href="sphpend.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -35,142 +37,25 @@
             
   <section id="lie-forward-euler">
 <span id="lieeuler"></span><h1>Lie Forward Euler<a class="headerlink" href="#lie-forward-euler" title="Permalink to this heading">¶</a></h1>
-<section id="balance-equations">
-<span id="mech-ibvp"></span><h2>Balance equations<a class="headerlink" href="#balance-equations" title="Permalink to this heading">¶</a></h2>
-<p>The local balance law of linear momentum in the dynamic process is given by</p>
+<section id="the-method">
+<span id="lie-euler"></span><h2>The Method<a class="headerlink" href="#the-method" title="Permalink to this heading">¶</a></h2>
+<p>The Lie forward Euler solves systems of the type</p>
 <div class="math notranslate nohighlight">
 \[\begin{align}
-    \nabla_{\mathbf{X}} \cdot \mathbf{P} + \rho_0 \bar{\mathbf{b}} =\rho_0\mathbf{\ddot{u}} \qquad {\rm in} \quad B
+    \dot{y} = f(y)
 \end{align}\]</div>
-<p>subject to the Dirichlet boundary conditions</p>
+<p>where the solutions can be searched in a Lie group setting.</p>
+<p>The method can be express by the formula:</p>
 <div class="math notranslate nohighlight">
 \[\begin{align}
-    \mathbf{u}&amp;=\bar{\mathbf{u}} \qquad {\rm on} \quad \partial_{u} B,
+    y_{n+1} = \exp{hf(y_{n})}\circ y_{n}
 \end{align}\]</div>
-<p>the Neumann boundary conditions</p>
-<div class="math notranslate nohighlight">
-\[\begin{align}
-    \mathbf{P}\cdot \mathbf{N}&amp;=\bar{\mathbf{T}} \qquad {\rm on} \quad \partial_{\sigma} B
-\end{align}\]</div>
-<p>and the initial conditions</p>
-<div class="math notranslate nohighlight">
-\[\begin{align}
-    \mathbf{\dot{u}}=\mathbf{0},\mathbf{\ddot{u}}=\mathbf{0},
-\end{align}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\mathbf{P}\)</span> is the first Piola-Kirchhoff stress tensor, <span class="math notranslate nohighlight">\(\rho_0\)</span> is the mass density in initial configuration,
-<span class="math notranslate nohighlight">\(\bar{\mathbf{b}}\)</span> is the body force vector, <span class="math notranslate nohighlight">\(\mathbf{\ddot{u}}\)</span> is the acceleration, <span class="math notranslate nohighlight">\(\bar{\mathbf{u}}\)</span> is the prescribed displacement and
-<span class="math notranslate nohighlight">\(\bar{\mathbf{T}}\)</span> is the prescribed traction. The local balance of angular momentum reads</p>
-<div class="math notranslate nohighlight">
-\[\begin{align}
-    \mathbf{F}\mathbf{P}^T = \mathbf{P}\mathbf{F}^T,
-\end{align}\]</div>
-<p>in which <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> is the deformation gradient defined as <span class="math notranslate nohighlight">\(\mathbf{F}=\partial\mathbf{x}(\mathbf{X},t)/ \partial \mathbf{X}\)</span>.</p>
+<p>where <span class="math notranslate nohighlight">\(exp\)</span> and <span class="math notranslate nohighlight">\(\circ\)</span> are respectively the exponential map and the action on the considered Lie group.</p>
 </section>
-<section id="maxwell-equations">
-<span id="elec-ibvp"></span><h2>Maxwell equations<a class="headerlink" href="#maxwell-equations" title="Permalink to this heading">¶</a></h2>
-<p>By neglecting the magnetic field, the Maxwell equations are given by</p>
-<div class="math notranslate nohighlight">
-\[\begin{align}
-    \nabla_{\mathbf{X}} \times \mathbf{E}^e=\mathbf{0}, \;\;\;\; \nabla_{\mathbf{X}} \cdot \mathbf{D}=0 \qquad {\rm in} \quad B
-\end{align}\]</div>
-<p>subject to the Dirichlet boundary conditions</p>
-<div class="math notranslate nohighlight">
-\[\begin{align}
-    \phi&amp;=\bar{\phi} \qquad {\rm on} \quad \partial_{\phi} B
-\end{align}\]</div>
-<p>and the Neumann boundary conditions</p>
-<div class="math notranslate nohighlight">
-\[\begin{align}
-    \mathbf{D}\cdot \mathbf{N}&amp;=\bar{Q} \qquad {\rm on} \quad \partial_D B
-\end{align}\]</div>
-<p>with <span class="math notranslate nohighlight">\(\mathbf{E}^e\)</span> the electric field, <span class="math notranslate nohighlight">\(\mathbf{D}\)</span> the electric displacement in the initial configuration,
-<span class="math notranslate nohighlight">\(\phi\)</span> the electric potential, <span class="math notranslate nohighlight">\(\bar{\phi}\)</span> the prescribed electric potential, <span class="math notranslate nohighlight">\(\mathbf{N}\)</span> the outward unit normal vector
-and <span class="math notranslate nohighlight">\(\bar{Q}\)</span> the prescribed charges per unit area on the boundary <span class="math notranslate nohighlight">\(\partial_D B\)</span>.
-The Maxwell equations introduced above lead to the definition of the electric field as the gradient of a scalar electric potential</p>
-<div class="math notranslate nohighlight">
-\[\begin{align}
-    \mathbf{E}^e=-\frac{\partial \phi}{\partial \mathbf{X}}.
-\end{align}\]</div>
-</section>
-<section id="kinematics-in-the-beam">
-<span id="kinematics-ibvp"></span><h2>Kinematics in the beam<a class="headerlink" href="#kinematics-in-the-beam" title="Permalink to this heading">¶</a></h2>
-<p>In the Cosserat formulation of geometrically exact beam, the placement of a material point in the current configuration of the
-beam is given by</p>
-<div class="math notranslate nohighlight">
-\[\begin{align}
-    \mathbf{x}(X^k,s,t)=\boldsymbol{\varphi}(s,t)+X^k \mathbf{d}_k(s,t), \;\;\;\; k=1,2.
-\end{align}\]</div>
-<p>where <span class="math notranslate nohighlight">\(s \in [0,L] \subset \mathbb{R}\)</span> denotes the arc-length of the line of the centroids <span class="math notranslate nohighlight">\(\boldsymbol{\varphi}(s,0)\in \mathbb{R}^3\)</span> in
-the initial configuration, <span class="math notranslate nohighlight">\(\mathbf{d}_i(s,t)\)</span> is an orthonormal triad at <span class="math notranslate nohighlight">\(s\)</span> with the directors <span class="math notranslate nohighlight">\(\mathbf{d}_k(s,t), k=1,2\)</span> spanning
-a principle basis of the cross section, and <span class="math notranslate nohighlight">\(X^k\)</span> are the curvilinear coordinates on the cross section.</p>
-<dl class="simple">
-<dt>For an initially straight beam, the deformation gradient at a point <span class="math notranslate nohighlight">\((X^1, X^2, s)\)</span> in the beam can be written as,</dt><dd><p>see (Auricchio, 2008),</p>
-</dd>
-</dl>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{align}
-    \mathbf{F}(X^1, X^2, s,t)&amp;=\frac{\partial \mathbf{x}}{\partial \mathbf{X}}=\frac{\partial \mathbf{x}}{\partial X_i} \otimes  \mathbf{d}_i(s,0) \nonumber\\
-    &amp;=\left[ \mathbf{I} + \left(\frac{\partial \boldsymbol{\varphi}(s,t)}{\partial s} - \mathbf{d}_3(s,t) + X^1 \frac{\partial \mathbf{d}_1(s,t)}{\partial s} + X^2 \frac{\partial \mathbf{d}_2(s,t)}{\partial s} \right)\otimes  \mathbf{d}_3(s,t) \right] \boldsymbol{\Lambda}(s),
-\end{align}\end{split}\]</div>
-<p>with the rotation tensor <span class="math notranslate nohighlight">\(\boldsymbol{\Lambda}(s)=\mathbf{d}_i(s,t) \otimes  \mathbf{d}_i(s,0)\)</span>
-and <span class="math notranslate nohighlight">\(\boldsymbol{\Lambda}(s)^{-1}=\boldsymbol{\Lambda}(s)^T\)</span>.</p>
-<p>To formulate the electromechanical coupling problem, the electric potential will serve as the extra degree of freedom. In this work,
-the electric potential at a point <span class="math notranslate nohighlight">\((X^1,X^2,s)\)</span> is represented by the electric potential at the beam node plus the increment
-from the beam node to the point <span class="math notranslate nohighlight">\((X^1,X^2)\)</span> on the cross section. Similar to the local description of the cross section, the electric potential on the cross section is given by</p>
-<blockquote>
-<div><div class="math notranslate nohighlight">
-\[\begin{align}
-    \phi (X^1,X^2,s)=\phi _o(s) + X^1 \alpha(s) + X^2 \beta(s)
-\end{align}\]</div>
-</div></blockquote>
-<p>with <span class="math notranslate nohighlight">\(\phi _o(s)\)</span> the electric potential at the beam node, <span class="math notranslate nohighlight">\(\alpha(s)\)</span> and <span class="math notranslate nohighlight">\(\beta(s)\)</span> the incremental parameters
-of the electric potential in the directions of <span class="math notranslate nohighlight">\(\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2\)</span> , respectively. If the electric
-potential is constant within the cross section (i.e. <span class="math notranslate nohighlight">\(\alpha,\beta=0\)</span> ), the electric field only exists in
-the <span class="math notranslate nohighlight">\(\mathbf{d}_3\)</span> direction, which will lead to the uniaxial contraction in beam.</p>
-<p>According to the Maxwell equations, the electric field is defined as the gradient of the  electric potential <span class="math notranslate nohighlight">\(\phi\)</span> .
-To compute the gradient of the electric potential for the beam, a similar approach as the deformation gradient can be adopted.
-Based on the formulation of the electric potential, the electric field at <span class="math notranslate nohighlight">\((X^1,X^2,s)\)</span> in the beam can be computed as</p>
-<blockquote>
-<div><div class="math notranslate nohighlight">
-\[\begin{split}\begin{align}
-    \mathbf{E}^e(X^1,X^2,s) &amp;= -\frac{\partial \phi}{\partial X_i} \otimes  \mathbf{d}_i(s,0)\\
-    &amp; =-\left[ \alpha(s)  \mathbf{d}_1(s,0) + \beta(s)  \mathbf{d}_2(s,0) + \left( \frac{\partial \phi_o(s)}{\partial s}  + X^1 \frac{\partial  \alpha(s)}{\partial s} + X^2 \frac{\partial  \beta(s)}{\partial s} \right) \mathbf{d}_3(s,0) \right]. \label{Ee}
-\end{align}\end{split}\]</div>
-</div></blockquote>
-</section>
-<section id="coupled-free-energy-in-the-beam">
-<span id="strainenergy-ibvp"></span><h2>Coupled free energy in the beam<a class="headerlink" href="#coupled-free-energy-in-the-beam" title="Permalink to this heading">¶</a></h2>
-<p>When the external electric field is imposed to the body of dielectric elastomer, the contractive pressure will be induced due to
-the polarization effects and thus the deformation of the body will be generated. The coupling effect between the electric field
-and the mechanical deformation is described by the free energy function <span class="math notranslate nohighlight">\(\Omega(\mathbf{F}, \mathbf{E}^e)\)</span> of the dielectric material
-in the constitutive equations</p>
-<div class="math notranslate nohighlight">
-\[\begin{align}
-    \mathbf{D}=-\rho_0\frac{\partial \Omega(\mathbf{F}, \mathbf{E}^e)}{\partial \mathbf{E}^e},  \;\;\;\;  \mathbf{P}=\rho_0\frac{\partial \Omega(\mathbf{F}, \mathbf{E}^e)}{\partial \mathbf{F}}.
-\end{align}\]</div>
-<p>For the dielectric materials, the electromechanical coupling can be described by the free energy function with the additive form</p>
-<div class="math notranslate nohighlight">
-\[\begin{align}
-    \Omega(\mathbf{F}, \mathbf{E}^e) = \Omega^m (\mathbf{F}) + \Omega^{\rm em}(\mathbf{F}, \mathbf{E}^e)  + \Omega^e( \mathbf{E}^e),
-\end{align}\]</div>
-<p>with <span class="math notranslate nohighlight">\(\Omega^m (\mathbf{F})\)</span> referring to the purely mechanical behavior, <span class="math notranslate nohighlight">\(\Omega^{\rm em}(\mathbf{F}, \mathbf{E}^e)\)</span> referring
-to the electomechanical coupling and <span class="math notranslate nohighlight">\(\Omega^e( \mathbf{E}^e)\)</span> referring to the pure electric behavior.</p>
-<p>A widely used strain energy density for dielectric elastomer is given by</p>
-<div class="math notranslate nohighlight">
-\[\begin{align}
-    \Omega(\mathbf{C},\mathbf{E}^e)=\underbrace{ \frac{\mu}{2} \left( \mathbf{C} : \mathbf{1}-3 \right) - \mu {\rm ln} J + \frac{\lambda}{2} ({\rm ln} J)^2}_{\text{Neo-Hookean}} +\underbrace{c_1 \mathbf{E}^e \cdot \mathbf{E}^e + c_2 \mathbf{C} : (\mathbf{E}^e \otimes \mathbf{E}^e)}_{\text{Polarization in dielectric material}} - \underbrace{ \frac{1}{2} \varepsilon_0 J \mathbf{C}^{-1} : (\mathbf{E}^e \otimes \mathbf{E}^e)}_{\text{Free space term in vacuum}}
-\end{align}\]</div>
-<p>with <span class="math notranslate nohighlight">\(\varepsilon_0\)</span> the vacuum permittivity, <span class="math notranslate nohighlight">\(c_1\)</span> and <span class="math notranslate nohighlight">\(c_2\)</span> the electrical parameters.
-It can be observed that the strain energy is composed of three parts, the Neo-Hookean part referring to the pure elastic
-behavior, the polarization part referring to the polarization in the condensed matter and the free space part referring to the
-effect in vacuum. The last two terms characterize the electromechanical coupling.</p>
-<p>The strain energy function for beam is obtained by integrating <span class="math notranslate nohighlight">\(\Omega(\mathbf{C},\mathbf{E}^e)\)</span> over the cross section</p>
-<div class="math notranslate nohighlight">
-\[\begin{align}
-    \Omega_b (\boldsymbol{\Gamma}, \mathbf{K}, \boldsymbol{\varepsilon}) =\int_{\Sigma} \Omega(\mathbf{C},\mathbf{E}^e) dA,
-\end{align}\]</div>
-<p>where the integration can be evaluated with the numerical approach as well as the analytical approach. As the analytical approach,
-the beam strain energy function <span class="math notranslate nohighlight">\(\Omega_b\)</span> is explicitly formulated in the Appendix of the paper (Huang and Leyendecker, 2022).</p>
+<section id="the-analysis">
+<span id="riemanniandistance"></span><h2>The Analysis<a class="headerlink" href="#the-analysis" title="Permalink to this heading">¶</a></h2>
+<p>We are interested in the analysis of the method. An interesting post-processing analysis is the measure of the distance between two trajectories.
+We use the Riemannian distance on the Riemannian manifold where the solution is set. In particular, choosing the Sasaki metric, one can measure the Riemannian distance as the norm of the Logarithmic map.</p>
 </section>
 </section>
 
@@ -191,8 +76,13 @@ the beam strain energy function <span class="math notranslate nohighlight">\(\Om
 
 
 <h3>Navigation</h3>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="sphpend.html">The spherical pendulum: description of the problem</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lie Forward Euler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-method">The Method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-analysis">The Analysis</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="matlab.html">MATLAB code</a></li>
 </ul>
 
@@ -200,6 +90,8 @@ the beam strain energy function <span class="math notranslate nohighlight">\(\Om
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="sphpend.html" title="previous chapter">The spherical pendulum: description of the problem</a></li>
+      <li>Next: <a href="matlab.html" title="next chapter">MATLAB code</a></li>
   </ul></li>
 </ul>
 </div>
