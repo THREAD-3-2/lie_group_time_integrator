@@ -48,76 +48,23 @@ implementing Lie group time integrators</p>
 <dl class="mat script">
 <dt class="sig sig-object mat" id="src.LieEuler">
 <span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">LieEuler</span></span><a class="headerlink" href="#src.LieEuler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lie Forward Euler time integrator</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>vector_field</strong> – right hand side of the ODE</p></li>
-<li><p><strong>action</strong> – action on the Lie group</p></li>
-<li><p><strong>expMap</strong> – exponential map from the Lie algebra to the Lie group</p></li>
-<li><p><strong>initial_condition</strong> – initial condition</p></li>
-<li><p><strong>h</strong> – time step size</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>discrete trajectory</p>
-</dd>
-</dl>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="mat script">
 <dt class="sig sig-object mat" id="src.actionSE3">
 <span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">actionSE3</span></span><a class="headerlink" href="#src.actionSE3" title="Permalink to this definition">¶</a></dt>
-<dd><p>action on the SE3 group</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>A</strong> – element of the Lie group SE3</p></li>
-<li><p><strong>v</strong> – element of the Lie algebra se3</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>element of the Lie algebra se3</p>
-</dd>
-</dl>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="mat script">
 <dt class="sig sig-object mat" id="src.expSE3">
 <span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">expSE3</span></span><a class="headerlink" href="#src.expSE3" title="Permalink to this definition">¶</a></dt>
-<dd><p>exponential map on the SE3 group</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>input</strong> – element of the Lie algebra se3</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>element of the Lie group SE3</p>
-</dd>
-</dl>
-</dd></dl>
+<dd></dd></dl>
 
 <p>A function implements the Newton-Raphson algorithm for implicit methods:</p>
 <dl class="mat script">
 <dt class="sig sig-object mat" id="src.NewtonRaphson">
 <span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">NewtonRaphson</span></span><a class="headerlink" href="#src.NewtonRaphson" title="Permalink to this definition">¶</a></dt>
-<dd><p>Newton-Raphson scheme to solve the dEL equations</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>residual</strong> – function to evaluate the RHS of the system</p></li>
-<li><p><strong>jacobian</strong> – iteration matrix</p></li>
-<li><p><strong>initial_condition</strong> – initial condition</p></li>
-<li><p><strong>h</strong> – time step size</p></li>
-<li><p><strong>max_it</strong> – maximum number of iterations</p></li>
-<li><p><strong>atol</strong> – absolute tolerance</p></li>
-<li><p><strong>rtol</strong> – relative tolerance</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>discrete trajectory</p>
-</dd>
-</dl>
-</dd></dl>
+<dd></dd></dl>
 
 <p>The module further contains an example script and related functions:</p>
 <dl class="mat script">
