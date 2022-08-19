@@ -12,6 +12,7 @@ Contents
 
 .. toctree::
    sphpend
+   lieeuler
    matlab
    :maxdepth: 2
 
