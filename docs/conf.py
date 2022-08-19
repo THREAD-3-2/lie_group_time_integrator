@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'lie_group_time_integrator'
+project = 'Lie Group Time Integrators'
 copyright = '2022, Ergys Çokaj, Denise Tumiotto'
 author = 'Ergys Çokaj, Denise Tumiotto'
 
@@ -42,7 +42,7 @@ extensions = [
 
 # specify the source folder of the MATLAB code
 # For a pure MATLAB project, you probably want to use `src` as the name.
-matlab_src_dir = "../"
+matlab_src_dir = "../src"
 # For a pure MATLAB project, you can specify `mat` as the primary domain to save some typing,
 # e.g. `autoclass` instead of `mat:autoclass` (see matlab.rst file).
 # primary_domain = 'mat'
