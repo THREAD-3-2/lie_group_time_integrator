@@ -201,6 +201,83 @@ implementing Lie group time integrators.</p>
 </section>
 <section id="src-post-processing">
 <h2>src/post_processing<a class="headerlink" href="#src-post-processing" title="Permalink to this heading">¶</a></h2>
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.post_processing.readAll">
+<span class="sig-prename descclassname"><span class="pre">src.post_processing.</span></span><span class="sig-name descname"><span class="pre">readAll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">many</span></em>, <em class="sig-param"><span class="pre">old</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.post_processing.readAll" title="Permalink to this definition">¶</a></dt>
+<dd><p>reading all solutions file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>many</strong> – how many solution to read</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>cells of solution and relative parameters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.post_processing.evalErr">
+<span class="sig-prename descclassname"><span class="pre">src.post_processing.</span></span><span class="sig-name descname"><span class="pre">evalErr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">sols</span></em>, <em class="sig-param"><span class="pre">params</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.post_processing.evalErr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the absolute and relative error w.r.t. a reference solution</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sols</strong> – solutions given in a cell struct</p></li>
+<li><p><strong>params</strong> – parameters of each solution given in a cell struct</p></li>
+</ul>
+</dd>
+<dt class="field-even">Results<span class="colon">:</span></dt>
+<dd class="field-even"><p>absolute and relative error at the end point</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.post_processing.plotErr">
+<span class="sig-prename descclassname"><span class="pre">src.post_processing.</span></span><span class="sig-name descname"><span class="pre">plotErr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">error</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.post_processing.plotErr" title="Permalink to this definition">¶</a></dt>
+<dd><p>plotting error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Params error<span class="colon">:</span></dt>
+<dd class="field-odd"><p>absolute and relative error</p>
+</dd>
+</dl>
+<p>over position and angular velocity</p>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.post_processing.potential">
+<span class="sig-prename descclassname"><span class="pre">src.post_processing.</span></span><span class="sig-name descname"><span class="pre">potential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">q</span></em>, <em class="sig-param"><span class="pre">L</span></em>, <em class="sig-param"><span class="pre">m</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.post_processing.potential" title="Permalink to this definition">¶</a></dt>
+<dd><p>Potential energy of a pendulum
+subject to Earth gravity [g = 9.81 m/s^2]
+with fix end in [0, 0, 0]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>q</strong> – position vector</p></li>
+<li><p><strong>L</strong> – lenght of the pendulum</p></li>
+<li><p><strong>m</strong> – mass of the pendulum</p></li>
+</ul>
+</dd>
+<dt class="field-even">Results<span class="colon">:</span></dt>
+<dd class="field-even"><p>potential energy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.post_processing.plotEnergy">
+<span class="sig-prename descclassname"><span class="pre">src.post_processing.</span></span><span class="sig-name descname"><span class="pre">plotEnergy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">sols</span></em>, <em class="sig-param"><span class="pre">params</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.post_processing.plotEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>plotting energy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sols</strong> – solutions given in a cell struct</p></li>
+<li><p><strong>params</strong> – parameters of each solution given in a cell struct</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 <p>Among the post-processing functions, we are interested in evaluate the distance between two solutions of the problem:</p>
 <dl class="mat function">
 <dt class="sig sig-object mat" id="src.post_processing.riemannianDistance">
@@ -210,8 +287,8 @@ Sasaki logarithmic map</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>sols</strong> – solutions</p></li>
-<li><p><strong>params</strong> – parameters of the relative solution/integration</p></li>
+<li><p><strong>sols</strong> – solutions given in a cell struct</p></li>
+<li><p><strong>params</strong> – parameters of each solution given in a cell struct</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
