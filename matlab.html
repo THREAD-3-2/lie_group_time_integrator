@@ -200,8 +200,26 @@ implementing Lie group time integrators.</p>
 
 </section>
 <section id="src-post-processing">
-<h2>src/post-processing<a class="headerlink" href="#src-post-processing" title="Permalink to this heading">¶</a></h2>
+<h2>src/post_processing<a class="headerlink" href="#src-post-processing" title="Permalink to this heading">¶</a></h2>
 <p>Among the post-processing functions, we are interested in evaluate the distance between two solutions of the problem:</p>
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.post_processing.riemannianDistance">
+<span class="sig-prename descclassname"><span class="pre">src.post_processing.</span></span><span class="sig-name descname"><span class="pre">riemannianDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">sols</span></em>, <em class="sig-param"><span class="pre">params</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.post_processing.riemannianDistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the distance using the norm of the
+Sasaki logarithmic map</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sols</strong> – solutions</p></li>
+<li><p><strong>params</strong> – parameters of the relative solution/integration</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Riemannian distance between the first two given solutions</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 </section>
 
@@ -228,7 +246,7 @@ implementing Lie group time integrators.</p>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">MATLAB code</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#module-src">src</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#src-integrator">src/integrator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#src-post-processing">src/post-processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#src-post-processing">src/post_processing</a></li>
 </ul>
 </li>
 </ul>
