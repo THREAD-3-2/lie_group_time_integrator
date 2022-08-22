@@ -37,85 +37,7 @@
 <span id="matlab"></span><h1>MATLAB code<a class="headerlink" href="#matlab-code" title="Permalink to this heading">¶</a></h1>
 <section id="module-src">
 <span id="src"></span><h2>src<a class="headerlink" href="#module-src" title="Permalink to this heading">¶</a></h2>
-<p><code class="xref py py-mod docutils literal notranslate"><span class="pre">src</span></code> module contains some functions
-implementing Lie group time integrators.</p>
-<p>For example, the Lie forward Euler:</p>
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.LieEuler">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">LieEuler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vector_field</span></em>, <em class="sig-param"><span class="pre">action</span></em>, <em class="sig-param"><span class="pre">expMap</span></em>, <em class="sig-param"><span class="pre">initial_condition</span></em>, <em class="sig-param"><span class="pre">h</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.LieEuler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lie Forward Euler time integrator</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>vector_field</strong> – right hand side of the ODE</p></li>
-<li><p><strong>action</strong> – action on the Lie group</p></li>
-<li><p><strong>expMap</strong> – exponential map from the Lie algebra to the Lie group</p></li>
-<li><p><strong>initial_condition</strong> – initial condition</p></li>
-<li><p><strong>h</strong> – time step size</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>discrete trajectory</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>The Newton-Raphson algorithm for implicit methods:</p>
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.NewtonRaphson">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">NewtonRaphson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">residual</span></em>, <em class="sig-param"><span class="pre">jacobian</span></em>, <em class="sig-param"><span class="pre">initial_condition</span></em>, <em class="sig-param"><span class="pre">h</span></em>, <em class="sig-param"><span class="pre">max_it</span></em>, <em class="sig-param"><span class="pre">atol</span></em>, <em class="sig-param"><span class="pre">rtol</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.NewtonRaphson" title="Permalink to this definition">¶</a></dt>
-<dd><p>Newton-Raphson scheme to solve the dEL equations</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>residual</strong> – function to evaluate the RHS of the system</p></li>
-<li><p><strong>jacobian</strong> – iteration matrix</p></li>
-<li><p><strong>initial_condition</strong> – initial condition</p></li>
-<li><p><strong>h</strong> – time step size</p></li>
-<li><p><strong>max_it</strong> – maximum number of iterations</p></li>
-<li><p><strong>atol</strong> – absolute tolerance</p></li>
-<li><p><strong>rtol</strong> – relative tolerance</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>discrete trajectory</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>Some useful function for the operation in the Lie group:</p>
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.actionSE3">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">actionSE3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">A</span></em>, <em class="sig-param"><span class="pre">v</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.actionSE3" title="Permalink to this definition">¶</a></dt>
-<dd><p>action on the SE3 group</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>A</strong> – element of the Lie group SE3</p></li>
-<li><p><strong>v</strong> – element of the Lie algebra se3</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>element of the Lie algebra se3</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.expSE3">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">expSE3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">input</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.expSE3" title="Permalink to this definition">¶</a></dt>
-<dd><p>exponential map on the SE3 group</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>input</strong> – element of the Lie algebra se3</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>element of the Lie group SE3</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p>The module further contains an example script and related functions:</p>
+<p><code class="xref py py-mod docutils literal notranslate"><span class="pre">src</span></code> module contains an example script and related functions:</p>
 <dl class="mat script">
 <dt class="sig sig-object mat" id="src.main">
 <span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">main</span></span><a class="headerlink" href="#src.main" title="Permalink to this definition">¶</a></dt>
@@ -195,25 +117,91 @@ concatenation of the two</p>
 </dl>
 </dd></dl>
 
-<p>Among the post-processing functions, we are interested in evaluate the distance between two solutions of the problem:</p>
+</section>
+<section id="src-integrator">
+<h2>src/integrator<a class="headerlink" href="#src-integrator" title="Permalink to this heading">¶</a></h2>
+<p>The folder <cite>integrator</cite> contains some functions
+implementing Lie group time integrators.</p>
+<p>For example, the Lie forward Euler:</p>
 <dl class="mat function">
-<dt class="sig sig-object mat" id="src.riemannianDistance">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">riemannianDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">sols</span></em>, <em class="sig-param"><span class="pre">params</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.riemannianDistance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Evaluates the distance using the norm of the
-Sasaki logarithmic map</p>
+<dt class="sig sig-object mat" id="src.integrator.LieEuler">
+<span class="sig-prename descclassname"><span class="pre">src.integrator.</span></span><span class="sig-name descname"><span class="pre">LieEuler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vector_field</span></em>, <em class="sig-param"><span class="pre">action</span></em>, <em class="sig-param"><span class="pre">expMap</span></em>, <em class="sig-param"><span class="pre">initial_condition</span></em>, <em class="sig-param"><span class="pre">h</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.integrator.LieEuler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lie Forward Euler time integrator</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>sols</strong> – solutions</p></li>
-<li><p><strong>params</strong> – parameters of the relative solution/integration</p></li>
+<li><p><strong>vector_field</strong> – right hand side of the ODE</p></li>
+<li><p><strong>action</strong> – action on the Lie group</p></li>
+<li><p><strong>expMap</strong> – exponential map from the Lie algebra to the Lie group</p></li>
+<li><p><strong>initial_condition</strong> – initial condition</p></li>
+<li><p><strong>h</strong> – time step size</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Riemannian distance between the first two given solutions</p>
+<dd class="field-even"><p>discrete trajectory</p>
 </dd>
 </dl>
 </dd></dl>
 
+<p>The Newton-Raphson algorithm for implicit methods:</p>
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.integrator.NewtonRaphson">
+<span class="sig-prename descclassname"><span class="pre">src.integrator.</span></span><span class="sig-name descname"><span class="pre">NewtonRaphson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">residual</span></em>, <em class="sig-param"><span class="pre">jacobian</span></em>, <em class="sig-param"><span class="pre">initial_condition</span></em>, <em class="sig-param"><span class="pre">h</span></em>, <em class="sig-param"><span class="pre">max_it</span></em>, <em class="sig-param"><span class="pre">atol</span></em>, <em class="sig-param"><span class="pre">rtol</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.integrator.NewtonRaphson" title="Permalink to this definition">¶</a></dt>
+<dd><p>Newton-Raphson scheme to solve the dEL equations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>residual</strong> – function to evaluate the RHS of the system</p></li>
+<li><p><strong>jacobian</strong> – iteration matrix</p></li>
+<li><p><strong>initial_condition</strong> – initial condition</p></li>
+<li><p><strong>h</strong> – time step size</p></li>
+<li><p><strong>max_it</strong> – maximum number of iterations</p></li>
+<li><p><strong>atol</strong> – absolute tolerance</p></li>
+<li><p><strong>rtol</strong> – relative tolerance</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>discrete trajectory</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Some useful function for the operation in the Lie group:</p>
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.integrator.actionSE3">
+<span class="sig-prename descclassname"><span class="pre">src.integrator.</span></span><span class="sig-name descname"><span class="pre">actionSE3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">A</span></em>, <em class="sig-param"><span class="pre">v</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.integrator.actionSE3" title="Permalink to this definition">¶</a></dt>
+<dd><p>action on the SE3 group</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>A</strong> – element of the Lie group SE3</p></li>
+<li><p><strong>v</strong> – element of the Lie algebra se3</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>element of the Lie algebra se3</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.integrator.expSE3">
+<span class="sig-prename descclassname"><span class="pre">src.integrator.</span></span><span class="sig-name descname"><span class="pre">expSE3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">input</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.integrator.expSE3" title="Permalink to this definition">¶</a></dt>
+<dd><p>exponential map on the SE3 group</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>input</strong> – element of the Lie algebra se3</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>element of the Lie group SE3</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="src-post-processing">
+<h2>src/post-processing<a class="headerlink" href="#src-post-processing" title="Permalink to this heading">¶</a></h2>
+<p>Among the post-processing functions, we are interested in evaluate the distance between two solutions of the problem:</p>
 </section>
 </section>
 
@@ -239,6 +227,8 @@ Sasaki logarithmic map</p>
 <li class="toctree-l1"><a class="reference internal" href="lieeuler.html">Lie Forward Euler</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">MATLAB code</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#module-src">src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#src-integrator">src/integrator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#src-post-processing">src/post-processing</a></li>
 </ul>
 </li>
 </ul>
