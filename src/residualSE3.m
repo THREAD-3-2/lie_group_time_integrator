@@ -9,6 +9,7 @@ function sol = residualSE3(v0, v, h, f, action, method)
 % :param method: numerical method in use
 %
 % :returns: RHS of the system
+%
 
 switch method
     case "implicit Lie Euler method"

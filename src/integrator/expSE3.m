@@ -4,6 +4,7 @@ function rslt = expSE3(input)
 % :param input: element of the Lie algebra se3
 %
 % :returns: element of the Lie group SE3
+%
     
 u = input(1:3);
 v = input(4:6);

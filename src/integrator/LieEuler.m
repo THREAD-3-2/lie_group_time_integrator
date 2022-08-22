@@ -8,6 +8,7 @@ function sol = LieEuler(vector_field, action, expMap, initial_condition, h)
 % :param h: time step size
 %
 % :returns: discrete trajectory
+%
 
 f = vector_field(initial_condition);
 

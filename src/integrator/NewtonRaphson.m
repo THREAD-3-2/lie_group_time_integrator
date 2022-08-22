@@ -10,6 +10,7 @@ function sol = NewtonRaphson(residual, jacobian, initial_condition, h, max_it, a
 % :param rtol: relative tolerance
 %
 % :returns: discrete trajectory
+%
 
 pNew = initial_condition;
 dx = zeros(size(initial_condition));

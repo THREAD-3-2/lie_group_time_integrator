@@ -6,6 +6,7 @@ function F = fManiToAlgebra(y, damp, k)
 % :param k: parameter
 %
 % :returns: vector field
+%
 
 q = y(1:3);
 w = y(3 + (1:3));

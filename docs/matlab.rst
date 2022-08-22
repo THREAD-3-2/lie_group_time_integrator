@@ -44,6 +44,17 @@ Some useful function for the operation in the Lie group:
 src/post_processing
 ====================
 
+.. mat:autofunction:: src.post_processing.readAll
+
+.. mat:autofunction:: src.post_processing.evalErr
+
+.. mat:autofunction:: src.post_processing.plotErr
+
+.. mat:autofunction:: src.post_processing.potential
+
+.. mat:autofunction:: src.post_processing.plotEnergy
+
 Among the post-processing functions, we are interested in evaluate the distance between two solutions of the problem:
 
 .. mat:autofunction:: src.post_processing.riemannianDistance
+
