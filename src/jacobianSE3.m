@@ -9,6 +9,7 @@ function sol = jacobianSE3(v0, v, h, f, action, method)
 % :param method: numerical method in use
 %
 % :returns: Jacobian of the system
+%
 
 sol = zeros(6);
 sol0 = action(expSE3(h*f(v0)), v0);

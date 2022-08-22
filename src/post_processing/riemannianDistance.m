@@ -2,10 +2,11 @@ function rslt = riemannianDistance(sols, params)
 % Evaluates the distance using the norm of the
 % Sasaki logarithmic map
 %
-% :param sols: solutions
-% :param params: parameters of the relative solution/integration
+% :param sols: solutions given in a cell struct
+% :param params: parameters of each solution given in a cell struct
 %
 % :returns: Riemannian distance between the first two given solutions
+%
 
 sol1 = sols{1};
 sol2 = sols{2};

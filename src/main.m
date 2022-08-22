@@ -1,4 +1,5 @@
 % Damped Spherical Pendulum solved with Lie groups time integrator
+%
 
 %% DEFINITION OF NUMERICAL PARAMETERS AND TIME INTEGRATION
 % CHOOSE a method
