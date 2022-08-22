@@ -41,9 +41,9 @@ Some useful function for the operation in the Lie group:
 
 .. mat:autofunction:: src.integrator.expSE3
 
-src/post-processing
+src/post_processing
 ====================
 
 Among the post-processing functions, we are interested in evaluate the distance between two solutions of the problem:
 
-.. mat:autofunction:: src.post-processing.riemannianDistance
+.. mat:autofunction:: src.post_processing.riemannianDistance
