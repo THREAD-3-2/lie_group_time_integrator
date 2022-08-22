@@ -5,28 +5,11 @@
 =============
 
 src
-===========
+====
 
 .. mat:automodule:: src
 
-:mod:`src` module contains some functions
-implementing Lie group time integrators.
-
-For example, the Lie forward Euler:
-
-.. mat:autofunction:: src.LieEuler
-
-The Newton-Raphson algorithm for implicit methods:
-
-.. mat:autofunction:: src.NewtonRaphson
-
-Some useful function for the operation in the Lie group:
-
-.. mat:autofunction:: src.actionSE3
-
-.. mat:autofunction:: src.expSE3
-    
-The module further contains an example script and related functions:
+:mod:`src` module contains an example script and related functions:
 
 .. mat:autoscript:: src.main
 
@@ -38,6 +21,29 @@ The module further contains an example script and related functions:
 
 .. mat:autofunction:: src.jacobianSE3
 
+src/integrator
+===============
+
+The folder `integrator` contains some functions
+implementing Lie group time integrators.
+
+For example, the Lie forward Euler:
+
+.. mat:autofunction:: src.integrator.LieEuler
+
+The Newton-Raphson algorithm for implicit methods:
+
+.. mat:autofunction:: src.integrator.NewtonRaphson
+
+Some useful function for the operation in the Lie group:
+
+.. mat:autofunction:: src.integrator.actionSE3
+
+.. mat:autofunction:: src.integrator.expSE3
+
+src/post-processing
+====================
+
 Among the post-processing functions, we are interested in evaluate the distance between two solutions of the problem:
 
-.. mat:autofunction:: src.riemannianDistance
+.. mat:autofunction:: src.post-processing.riemannianDistance
