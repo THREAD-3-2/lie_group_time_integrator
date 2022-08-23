@@ -1,6 +1,11 @@
 % Damped Spherical Pendulum solved with Lie groups time integrator
 %
 
+clearvars
+clc
+
+addpath('integrator')
+
 %% DEFINITION OF NUMERICAL PARAMETERS AND TIME INTEGRATION
 % CHOOSE a method
 %
@@ -45,6 +50,13 @@ m = 1;
 d = 0.1;
 k = 0;
 
+%% SAVE PARAMETERS TO FILE
+% save the time stamp as a string.
+% format: 'yyyyMMddTHHmmss'
+timestamp = datestr(now,30);
+filename = strcat('out/', timestamp, 'prm', '.mat');
+save(filename)
+
 %% DEFINITION OF USEFUL FUNCTIONS
 
 % RHS OF THE SYSTEM
@@ -79,3 +91,8 @@ for i = 2:nSteps
     wSol(:, i) = zSol(3+(1:3), i);
 end
 
+%% SAVE SOLUTION ON TXT FILE
+% save the time stamp as a string.
+% format: 'yyyyMMddTHHmmss'
+filename = strcat('out/', timestamp, 'sol', '.mat');
+save(filename, 'zSol')
