@@ -16,14 +16,14 @@ if theta>tol
     rslt = sin(theta)/theta;
     B = (1-cos(theta))/(theta^2);
     C = (1-rslt)/(theta^2);
-    V = eye(3) + B*hat(u) + C * hat(u) * hat(u);
+    V = eye(3) + B*skw(u) + C * skw(u) * skw(u);
     rslt = [expRodrigues(u), V*v];
 elseif theta==0
     rslt = [expRodrigues(u), v];
 else
     Blow = 0.5-theta^2/24 + theta^4/720 - theta^6/40320;
     Clow = (1/6-theta^2/120+theta^4/5040-theta^6/362880);
-    Vlow = eye(3) + Blow*hat(u) + Clow * hat(u) * hat(u);
+    Vlow = eye(3) + Blow*skw(u) + Clow * skw(u) * skw(u);
     rslt = [expRodrigues(u), Vlow*v];
 end
     
