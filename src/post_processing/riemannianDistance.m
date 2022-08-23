@@ -11,8 +11,8 @@ function rslt = riemannianDistance(sols, params)
 sol1 = sols{1};
 sol2 = sols{2};
 
-n1 = params{1}.N_TIME;
-n2 = params{2}.N_TIME;
+n1 = params{1}.nSteps;
+n2 = params{2}.nSteps;
 
 n = min([n1, n2]);
 

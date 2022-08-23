@@ -36,7 +36,7 @@ for k = 1:m
         continue
     end
     crrSol = sols{k};
-    error.steps(count) = (params{k}.T - params{k}.t0)/params{k}.N_TIME;
+    error.steps(count) = (params{k}.te - params{k}.t0)/params{k}.nSteps;
     % absolute error (q and w)
     error.q_abserr(count) = abserr(crrSol(1:3, :), ref(1:3, :));
     error.w_abserr(count) = abserr(crrSol(4:6, :), ref(4:6, :));

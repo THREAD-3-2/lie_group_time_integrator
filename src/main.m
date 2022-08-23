@@ -80,7 +80,7 @@ wSol(:, 1) = w0;
 zSol(:, 1) = z0;
 
 %% SOLUTION OF THE SYSTEM
-
+tic
 for i = 2:nSteps
     if method == 1
         zSol(:, i) = LieEuler(f, action, expMap, zSol(:, i-1), dt);
@@ -90,9 +90,13 @@ for i = 2:nSteps
     qSol(:, i) = zSol(1:3, i);
     wSol(:, i) = zSol(3+(1:3), i);
 end
+toc
 
 %% SAVE SOLUTION ON TXT FILE
 % save the time stamp as a string.
 % format: 'yyyyMMddTHHmmss'
 filename = strcat('out/', timestamp, 'sol', '.mat');
 save(filename, 'zSol')
+
+%%
+clearvars
