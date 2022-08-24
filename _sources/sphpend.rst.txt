@@ -5,7 +5,7 @@
  The spherical pendulum: description of the problem 
 ===================================================
 
-We consider the Lie group setting as in the paper `(Elena Celledoni, Ergys Çokaj, Andrea Leone, Davide Murari & and Brynjulf Owren, (2021) International Journal of Computer Mathematics) <https://doi.org/10.1080/00207160.2021.1966772>`_. 
+We consider the Lie group setting as in the paper `(Celledoni, Çokaj, Leone, Murari and Owren, (2021) International Journal of Computer Mathematics) <https://doi.org/10.1080/00207160.2021.1966772>`_. 
 We limit ourselves to the case of a single spherical pendulum. 
 The equations in this case are:
 
