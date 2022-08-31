@@ -43,20 +43,17 @@
     \dot{y} = f(y)
 \end{align}\]</div>
 <p>where the solutions can be searched in a Lie group setting.</p>
-<blockquote id="lie-ex-euler">
-<div><p>Lie Forward Euler</p>
-</div></blockquote>
-<hr class="docutils" />
+<section id="lie-forward-euler">
+<span id="lie-ex-euler"></span><h2>Lie Forward Euler<a class="headerlink" href="#lie-forward-euler" title="Permalink to this heading">¶</a></h2>
 <p>The method can be express by the formula:</p>
 <div class="math notranslate nohighlight">
 \[\begin{align}
     y_{n+1} = \exp{(hf(y_{n}))}\circ y_{n}
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\exp\)</span> and <span class="math notranslate nohighlight">\(\circ\)</span> are respectively the exponential map and the action on the considered Lie group, and <span class="math notranslate nohighlight">\(h\)</span> is the time step size.</p>
-<blockquote id="lie-im-euler">
-<div><p>Lie Backward Euler</p>
-</div></blockquote>
-<hr class="docutils" />
+</section>
+<section id="lie-backward-euler">
+<span id="lie-im-euler"></span><h2>Lie Backward Euler<a class="headerlink" href="#lie-backward-euler" title="Permalink to this heading">¶</a></h2>
 <p>Similar to the <cite>Lie Forward Euler</cite>, the <cite>Lie Backward Euler</cite> uses the operation on the considered Lie group to find the solution.
 Its scheme is:</p>
 <div class="math notranslate nohighlight">
@@ -64,6 +61,7 @@ Its scheme is:</p>
     y_{n+1} = \exp{(hf(y_{n+1}))}\circ y_{n}
 \end{align}\]</div>
 <p>where, again, <span class="math notranslate nohighlight">\(\exp\)</span> and <span class="math notranslate nohighlight">\(\circ\)</span> are respectively the exponential map and the action on the considered Lie group, and <span class="math notranslate nohighlight">\(h\)</span> is the time step size.</p>
+</section>
 <section id="lie-midpoint-rule">
 <span id="lie-midpt"></span><h2>Lie Midpoint Rule<a class="headerlink" href="#lie-midpoint-rule" title="Permalink to this heading">¶</a></h2>
 <p>Finally, we used to comparison also a Midpoint Rule in the Lie group setting.
@@ -96,6 +94,8 @@ The expression for this method is:</p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="sphpend.html">The spherical pendulum: description of the problem</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Lie Integrators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#lie-forward-euler">Lie Forward Euler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lie-backward-euler">Lie Backward Euler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lie-midpoint-rule">Lie Midpoint Rule</a></li>
 </ul>
 </li>

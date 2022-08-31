@@ -16,7 +16,7 @@ where the solutions can be searched in a Lie group setting.
 
 .. _Lie_Ex_Euler:
 
- Lie Forward Euler
+Lie Forward Euler
 -------------------
 
 The method can be express by the formula:
@@ -31,7 +31,7 @@ where :math:`\exp` and :math:`\circ` are respectively the exponential map and th
 
 .. _Lie_Im_Euler:
 
- Lie Backward Euler
+Lie Backward Euler
 --------------------
 
 Similar to the `Lie Forward Euler`, the `Lie Backward Euler` uses the operation on the considered Lie group to find the solution.
