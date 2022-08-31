@@ -17,8 +17,6 @@
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="MATLAB code" href="matlab.html" />
-    <link rel="prev" title="The spherical pendulum: description of the problem" href="sphpend.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -39,7 +37,7 @@
 <span id="lieeuler"></span><h1>Lie Forward Euler<a class="headerlink" href="#lie-forward-euler" title="Permalink to this heading">¶</a></h1>
 <section id="the-method">
 <span id="lie-euler"></span><h2>The Method<a class="headerlink" href="#the-method" title="Permalink to this heading">¶</a></h2>
-<p>The Lie forward Euler solves systems of the type</p>
+<p>The Lie forward Euler solves systems of the type:</p>
 <div class="math notranslate nohighlight">
 \[\begin{align}
     \dot{y} = f(y)
@@ -50,7 +48,7 @@
 \[\begin{align}
     y_{n+1} = \exp{(hf(y_{n}))}\circ y_{n}
 \end{align}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\exp\)</span> and <span class="math notranslate nohighlight">\(\circ\)</span> are respectively the exponential map and the action on the considered Lie group.</p>
+<p>where <span class="math notranslate nohighlight">\(\exp\)</span> and <span class="math notranslate nohighlight">\(\circ\)</span> are respectively the exponential map and the action on the considered Lie group, and <span class="math notranslate nohighlight">\(h\)</span> is the time step size.</p>
 </section>
 <section id="the-analysis">
 <span id="riemanniandistance"></span><h2>The Analysis<a class="headerlink" href="#the-analysis" title="Permalink to this heading">¶</a></h2>
@@ -76,13 +74,9 @@ We use the Riemannian distance on the Riemannian manifold where the solution is 
 
 
 <h3>Navigation</h3>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="sphpend.html">The spherical pendulum: description of the problem</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Lie Forward Euler</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#the-method">The Method</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#the-analysis">The Analysis</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="lieintegr.html">Lie Integrators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matlab.html">MATLAB code</a></li>
 </ul>
 
@@ -90,8 +84,6 @@ We use the Riemannian distance on the Riemannian manifold where the solution is 
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="sphpend.html" title="previous chapter">The spherical pendulum: description of the problem</a></li>
-      <li>Next: <a href="matlab.html" title="next chapter">MATLAB code</a></li>
   </ul></li>
 </ul>
 </div>
@@ -125,7 +117,7 @@ We use the Riemannian distance on the Riemannian manifold where the solution is 
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="_sources/lieeuler.rst.txt"
+      <a href="_sources/liemidpoint.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

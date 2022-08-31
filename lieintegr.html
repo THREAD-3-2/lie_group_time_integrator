@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Lie Integrators &#8212; Lie Group Time Integrators 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="MATLAB code" href="matlab.html" />
+    <link rel="prev" title="The spherical pendulum: description of the problem" href="sphpend.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="lie-integrators">
+<span id="lieintegr"></span><h1>Lie Integrators<a class="headerlink" href="#lie-integrators" title="Permalink to this heading">¶</a></h1>
+<p>The following schemes solve systems of the form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    \dot{y} = f(y)
+\end{align}\]</div>
+<p>where the solutions can be searched in a Lie group setting.</p>
+<blockquote id="lie-ex-euler">
+<div><p>Lie Forward Euler</p>
+</div></blockquote>
+<hr class="docutils" />
+<p>The method can be express by the formula:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    y_{n+1} = \exp{(hf(y_{n}))}\circ y_{n}
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\exp\)</span> and <span class="math notranslate nohighlight">\(\circ\)</span> are respectively the exponential map and the action on the considered Lie group, and <span class="math notranslate nohighlight">\(h\)</span> is the time step size.</p>
+<blockquote id="lie-im-euler">
+<div><p>Lie Backward Euler</p>
+</div></blockquote>
+<hr class="docutils" />
+<p>Similar to the <cite>Lie Forward Euler</cite>, the <cite>Lie Backward Euler</cite> uses the operation on the considered Lie group to find the solution.
+Its scheme is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    y_{n+1} = \exp{(hf(y_{n+1}))}\circ y_{n}
+\end{align}\]</div>
+<p>where, again, <span class="math notranslate nohighlight">\(\exp\)</span> and <span class="math notranslate nohighlight">\(\circ\)</span> are respectively the exponential map and the action on the considered Lie group, and <span class="math notranslate nohighlight">\(h\)</span> is the time step size.</p>
+<section id="lie-midpoint-rule">
+<span id="lie-midpt"></span><h2>Lie Midpoint Rule<a class="headerlink" href="#lie-midpoint-rule" title="Permalink to this heading">¶</a></h2>
+<p>Finally, we used to comparison also a Midpoint Rule in the Lie group setting.
+The expression for this method is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    y_{n+1} = \exp{(hf(\frac{y_{n+1}+y_{n}}{2}))}\circ y_{n}
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\exp\)</span> and <span class="math notranslate nohighlight">\(\circ\)</span> are respectively the exponential map and the action on the considered Lie group, and <span class="math notranslate nohighlight">\(h\)</span> is the time step size.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Lie Group Time Integrators</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sphpend.html">The spherical pendulum: description of the problem</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lie Integrators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#lie-midpoint-rule">Lie Midpoint Rule</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matlab.html">MATLAB code</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="sphpend.html" title="previous chapter">The spherical pendulum: description of the problem</a></li>
+      <li>Next: <a href="matlab.html" title="next chapter">MATLAB code</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Ergys Çokaj, Denise Tumiotto.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.1.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/lieintegr.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
