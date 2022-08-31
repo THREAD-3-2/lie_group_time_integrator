@@ -9,7 +9,7 @@
 The Method
 -----------
 
-The Lie forward Euler solves systems of the type
+The Lie forward Euler solves systems of the type:
 
 .. math::
 
@@ -27,7 +27,7 @@ The method can be express by the formula:
         y_{n+1} = \exp{(hf(y_{n}))}\circ y_{n}
     \end{align}
 
-where :math:`\exp` and :math:`\circ` are respectively the exponential map and the action on the considered Lie group.
+where :math:`\exp` and :math:`\circ` are respectively the exponential map and the action on the considered Lie group, and :math:`h` is the time step size.
 
 .. _riemannianDistance:
 
