@@ -1,5 +1,5 @@
 function sol = NewtonRaphson(residual, jacobian, initial_condition, h, max_it, atol, rtol)
-% Newton-Raphson scheme to solve the dEL equations
+% Newton-Raphson scheme to solve the differential equations
 %
 % :param residual: function to evaluate the RHS of the system
 % :param jacobian: iteration matrix
