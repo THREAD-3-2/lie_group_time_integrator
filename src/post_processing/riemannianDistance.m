@@ -1,6 +1,6 @@
 function rslt = riemannianDistance(sols, params)
 % Evaluates the distance using the norm of the
-% Sasaki logarithmic map
+% Sasaki Logarithmic map
 %
 % :param sols: solutions given in a cell struct
 % :param params: parameters of each solution given in a cell struct

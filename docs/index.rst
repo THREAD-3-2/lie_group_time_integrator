@@ -11,6 +11,7 @@ Contents
 ========
 
 .. toctree::
+   howto
    sphpend
    lieintegr
    matlab

@@ -1,4 +1,4 @@
-% Damped Spherical Pendulum solved with Lie groups time integrator
+% Damped Spherical Pendulum solved with Lie group time integrator
 %
 
 clearvars
