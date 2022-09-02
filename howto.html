@@ -37,22 +37,22 @@
             
   <section id="how-to-use">
 <span id="howto"></span><h1>How to use<a class="headerlink" href="#how-to-use" title="Permalink to this heading">¶</a></h1>
-<p>The present documentation present a test case and its study.</p>
+<p>The current documentation presents a test case and its study.</p>
 <p>In the section <a class="reference internal" href="sphpend.html#sphpend"><span class="std std-ref">The spherical pendulum</span></a>, the problem is described from a theoretical point of view.
 One can read the equations of the motion, which are solved later by the MATLAB code.</p>
 <p>In the section <a class="reference internal" href="lieintegr.html#lieintegr"><span class="std std-ref">Lie Integrators</span></a>, three formulations of Lie integrators are given and explained.</p>
 <p>Finally, in section <a class="reference internal" href="matlab.html#matlab"><span class="std std-ref">MATLAB code</span></a>, the code is documented.
 Looking at the code, it is organized in folders.
 The first one, <a class="reference internal" href="matlab.html#src"><span class="std std-ref">src</span></a>, refers to the main folder in which the test case is solved.
-Launching the script <cite>main.m</cite> will resolve in the saving of the parameters and solution files in the folder <cite>out/</cite>.
-Inside the <cite>main.m</cite> is possible to define the physical and numerical parameters, as well as the numerical method the user wants to adopt in the solution of the equations.
+Launching the script <cite>main.m</cite> will result in the saving of the parameters and solution files in the folder <cite>out/</cite>.
+Inside the <cite>main.m</cite>, it is possible to define the physical and numerical parameters, as well as the numerical method the user wants to adopt in the solution of the equations.
 The other functions are specific to the problem and evaluate the problem, its residual and Jacobian.
-The first subfolder, <a class="reference internal" href="matlab.html#src-integr"><span class="std std-ref">src/integrator</span></a>, contains the Lie integrators described before and the useful functions of the relative manifold in which the problem is set.
-Among the useful functions there are the exponential and the action in the space <span class="math notranslate nohighlight">\(SE(3)=SO(3)\ltimes\mathbb{R}^3\)</span>.
-In the last subfolder, <a class="reference internal" href="matlab.html#src-post"><span class="std std-ref">src/post_processing</span></a>, there are some function for the post-processing analysis.
+The first subfolder, <a class="reference internal" href="matlab.html#src-integr"><span class="std std-ref">src/integrator</span></a>, contains the Lie group integrators described before and the useful functions of the relative manifold in which the problem is set.
+Among the useful functions there are the exponential and the group action of <span class="math notranslate nohighlight">\(SE(3)=SO(3)\ltimes\mathbb{R}^3\)</span>.
+In the last subfolder, <a class="reference internal" href="matlab.html#src-post"><span class="std std-ref">src/post_processing</span></a>, there are some functions for the post-processing analysis.
 Those functions are not called in the main script, which only solves the problem saving the solutions.
 To examine the results, first use <cite>readAll.m</cite> to read the files in the folder <cite>out/</cite>.
-Once <cite>readAll.m</cite> finishes, the results will be stored in two cell variable of size equal to the total number of solutions.
+Once <cite>readAll.m</cite> finishes, the results will be stored in two cell variables of size equal to the total number of solutions.
 The first cell variable contains the parameters of each solution run, while the second cell variable contains the matrices with the solution at each time step.
 The following functions are written to use the parameters and the solutions in the format given by the <cite>readAll.m</cite> script.</p>
 </section>
