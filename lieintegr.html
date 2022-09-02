@@ -18,7 +18,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="MATLAB code" href="matlab.html" />
-    <link rel="prev" title="The spherical pendulum: description of the problem" href="sphpend.html" />
+    <link rel="prev" title="The spherical pendulum" href="sphpend.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -40,15 +40,15 @@
 <p>The following schemes solve systems of the form:</p>
 <div class="math notranslate nohighlight">
 \[\begin{align}
-    \dot{y} = f(y)
+    \dot{y} = A(y)y
 \end{align}\]</div>
-<p>where the solutions can be searched in a Lie group setting.</p>
+<p>where <a href="#id1"><span class="problematic" id="id2">:maht:`A`</span></a> is a matrix and the solutions can be searched in a Lie group setting.</p>
 <section id="lie-forward-euler">
 <span id="lie-ex-euler"></span><h2>Lie Forward Euler<a class="headerlink" href="#lie-forward-euler" title="Permalink to this heading">¶</a></h2>
-<p>The method can be express by the formula:</p>
+<p>The method can be expressed by the formula:</p>
 <div class="math notranslate nohighlight">
 \[\begin{align}
-    y_{n+1} = \exp{(hf(y_{n}))}\circ y_{n}
+    y_{n+1} = \exp{(hA(y_{n}))}\circ y_{n}
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\exp\)</span> and <span class="math notranslate nohighlight">\(\circ\)</span> are respectively the exponential map and the action on the considered Lie group, and <span class="math notranslate nohighlight">\(h\)</span> is the time step size.</p>
 </section>
@@ -58,7 +58,7 @@
 Its scheme is:</p>
 <div class="math notranslate nohighlight">
 \[\begin{align}
-    y_{n+1} = \exp{(hf(y_{n+1}))}\circ y_{n}
+    y_{n+1} = \exp{(hA(y_{n+1}))}\circ y_{n}
 \end{align}\]</div>
 <p>where, again, <span class="math notranslate nohighlight">\(\exp\)</span> and <span class="math notranslate nohighlight">\(\circ\)</span> are respectively the exponential map and the action on the considered Lie group, and <span class="math notranslate nohighlight">\(h\)</span> is the time step size.</p>
 </section>
@@ -68,7 +68,7 @@ Its scheme is:</p>
 The expression for this method is:</p>
 <div class="math notranslate nohighlight">
 \[\begin{align}
-    y_{n+1} = \exp{(hf(\frac{y_{n+1}+y_{n}}{2}))}\circ y_{n}
+    y_{n+1} = \exp{(hA(\frac{y_{n+1}+y_{n}}{2}))}\circ y_{n}
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\exp\)</span> and <span class="math notranslate nohighlight">\(\circ\)</span> are respectively the exponential map and the action on the considered Lie group, and <span class="math notranslate nohighlight">\(h\)</span> is the time step size.</p>
 </section>
@@ -92,7 +92,8 @@ The expression for this method is:</p>
 
 <h3>Navigation</h3>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="sphpend.html">The spherical pendulum: description of the problem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto.html">How to use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphpend.html">The spherical pendulum</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Lie Integrators</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#lie-forward-euler">Lie Forward Euler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lie-backward-euler">Lie Backward Euler</a></li>
@@ -106,7 +107,7 @@ The expression for this method is:</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="sphpend.html" title="previous chapter">The spherical pendulum: description of the problem</a></li>
+      <li>Previous: <a href="sphpend.html" title="previous chapter">The spherical pendulum</a></li>
       <li>Next: <a href="matlab.html" title="next chapter">MATLAB code</a></li>
   </ul></li>
 </ul>

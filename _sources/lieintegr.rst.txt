@@ -9,22 +9,22 @@ The following schemes solve systems of the form:
 .. math::
 
     \begin{align}
-        \dot{y} = f(y)
+        \dot{y} = A(y)y
     \end{align}
 
-where the solutions can be searched in a Lie group setting.
+where :maht:`A` is a matrix and the solutions can be searched in a Lie group setting.
 
 .. _Lie_Ex_Euler:
 
 Lie Forward Euler
 -------------------
 
-The method can be express by the formula:
+The method can be expressed by the formula:
 
 .. math::
 
     \begin{align}
-        y_{n+1} = \exp{(hf(y_{n}))}\circ y_{n}
+        y_{n+1} = \exp{(hA(y_{n}))}\circ y_{n}
     \end{align}
 
 where :math:`\exp` and :math:`\circ` are respectively the exponential map and the action on the considered Lie group, and :math:`h` is the time step size.
@@ -40,7 +40,7 @@ Its scheme is:
 .. math::
 
     \begin{align}
-        y_{n+1} = \exp{(hf(y_{n+1}))}\circ y_{n}
+        y_{n+1} = \exp{(hA(y_{n+1}))}\circ y_{n}
     \end{align}
 
 where, again, :math:`\exp` and :math:`\circ` are respectively the exponential map and the action on the considered Lie group, and :math:`h` is the time step size.
@@ -56,7 +56,7 @@ The expression for this method is:
 .. math::
 
     \begin{align}
-        y_{n+1} = \exp{(hf(\frac{y_{n+1}+y_{n}}{2}))}\circ y_{n}
+        y_{n+1} = \exp{(hA(\frac{y_{n+1}+y_{n}}{2}))}\circ y_{n}
     \end{align}
 
 where :math:`\exp` and :math:`\circ` are respectively the exponential map and the action on the considered Lie group, and :math:`h` is the time step size.
