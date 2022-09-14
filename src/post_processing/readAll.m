@@ -1,5 +1,5 @@
 function [sols, params] = readAll(many)
-% reading all solutions file
+% reading all solution files
 % 
 % :param many: how many solutions to read
 %
