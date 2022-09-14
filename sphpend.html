@@ -48,7 +48,7 @@ The equations in this case are:</p>
 \end{align}\]</div>
 <div class="math notranslate nohighlight" id="eq-2">
 <span id="equation-eq-2"></span><span class="eqno">(2)<a class="headerlink" href="#eq-2" title="Permalink to this equation">¶</a></span>\[\begin{align}
-    \dot{\omega}  = ge_3\times q,
+    \dot{\omega}  = -ge_3\times q,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(q \in S^2\)</span> and <span class="math notranslate nohighlight">\(\omega \in T_{q}S^2\)</span> denote the position and the angular velocity, respectively.  <span class="math notranslate nohighlight">\(g\)</span> denotes the gravitational constant and <span class="math notranslate nohighlight">\(e_3 = [0, 0, 1]^{\top}.\)</span>
 This is a mechanical system with preserved energy:</p>
@@ -60,9 +60,11 @@ This is a mechanical system with preserved energy:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}
     \dot{q} &amp; =  \omega\times q \\
-    \dot{\omega} &amp; = ge_3\times q - d\omega + k(\omega^{\top} q)q
+    \dot{\omega} &amp; = -ge_3\times q - d\omega + k\langle\omega, q\rangle q
 \end{align}\end{split}\]</div>
-<p>The first term, <span class="math notranslate nohighlight">\(-d\omega\)</span>, is a damping term, while the term <span class="math notranslate nohighlight">\(k(\omega^{\top} q)q\)</span> is equal to zero <span class="math notranslate nohighlight">\(\forall (q, \omega)\in TS^2\)</span>.</p>
+<p>The first term, <span class="math notranslate nohighlight">\(-d\omega\)</span>, is a damping term, while the term <span class="math notranslate nohighlight">\(k\langle\omega, q\rangle q\)</span> is equal to zero <span class="math notranslate nohighlight">\(\forall (q, \omega)\in TS^2\)</span>.
+This second term is a useful tool to verify that the integrator solves the problem on the manifold.
+In fact, by performing the integration with a classical integrator, e.g. ode45 on Matlab, the solution does not remain on the manifold and rapidly deviates from the expected trajectory.</p>
 </section>
 </section>
 

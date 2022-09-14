@@ -23,7 +23,7 @@ The equations in this case are:
     :name: eq:2
     
     \begin{align}
-        \dot{\omega}  = ge_3\times q,
+        \dot{\omega}  = -ge_3\times q,
     \end{align}
 
 where :math:`q \in S^2` and :math:`\omega \in T_{q}S^2` denote the position and the angular velocity, respectively.  :math:`g` denotes the gravitational constant and :math:`e_3 = [0, 0, 1]^{\top}.`
@@ -41,8 +41,9 @@ We then slightly modify the system by adding two terms in :ref:`Equation (2) <eq
 
     \begin{align}
         \dot{q} & =  \omega\times q \\
-        \dot{\omega} & = ge_3\times q - d\omega + k(\omega^{\top} q)q
+        \dot{\omega} & = -ge_3\times q - d\omega + k\langle\omega, q\rangle q
     \end{align}
-The first term, :math:`-d\omega`, is a damping term, while the term :math:`k(\omega^{\top} q)q` is equal to zero :math:`\forall (q, \omega)\in TS^2`.
-
+The first term, :math:`-d\omega`, is a damping term, while the term :math:`k\langle\omega, q\rangle q` is equal to zero :math:`\forall (q, \omega)\in TS^2`.
+This second term is a useful tool to verify that the integrator solves the problem on the manifold.
+In fact, by performing the integration with a classical integrator, e.g. ode45 on Matlab, the solution does not remain on the manifold and rapidly deviates from the expected trajectory.
 
