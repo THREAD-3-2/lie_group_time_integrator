@@ -1,7 +1,7 @@
 function [q0, w0, z0] = initializeSE3()
-% Initialization in SE(3)
+% Initialization in SE3
 %
-% :returns: normalized vector in R^3
+% :returns: normalized vector in R3
 % respective orthogonal vector (angular velocity)
 % concatenation of the two
 %
