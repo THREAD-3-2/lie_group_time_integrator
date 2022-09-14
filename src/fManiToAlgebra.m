@@ -1,5 +1,5 @@
 function F = fManiToAlgebra(y, damp, k)
-% Right hand side of the mathematical pendulum
+% Right hand side of the spherical pendulum in the corresponding Lie algebra.
 %
 % :param y: generalized coordinates
 % :param damp: damping parameter
