@@ -1,7 +1,7 @@
 function [sols, params] = readAll(many)
 % reading all solutions file
 % 
-% :param many: how many solution to read
+% :param many: how many solutions to read
 %
 % :returns: cells of solution and relative parameters
 %
