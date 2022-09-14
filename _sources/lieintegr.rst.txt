@@ -12,7 +12,7 @@ The following schemes solve systems of the form:
         \dot{y} = A(y)y
     \end{align}
 
-where :maht:`A` is a matrix and the solutions can be searched in a Lie group setting.
+where :math:`A` is a matrix. The solutions can be searched in a Lie group setting, if :math:`A(y)` is a matrix-valued element of the corresposnding Lie algebra.
 
 .. _Lie_Ex_Euler:
 
@@ -50,7 +50,7 @@ where, again, :math:`\exp` and :math:`\circ` are respectively the exponential ma
 Lie Midpoint Rule
 ------------------
 
-Finally, we used to comparison also a Midpoint Rule in the Lie group setting.
+Finally, we used for comparison also a Midpoint Rule in the Lie group setting.
 The expression for this method is:
 
 .. math::
