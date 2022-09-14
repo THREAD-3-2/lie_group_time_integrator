@@ -9,7 +9,7 @@ function sol = NewtonRaphson(residual, jacobian, initial_condition, h, max_it, a
 % :param atol: absolute tolerance
 % :param rtol: relative tolerance
 %
-% :returns: discrete trajectory
+% :returns: solution of the system of nonlinear equations
 %
 
 pNew = initial_condition;
