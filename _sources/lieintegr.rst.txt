@@ -12,7 +12,7 @@ The following schemes solve systems of the form:
         \dot{y} = A(y)y
     \end{align}
 
-where :math:`A` is a matrix. The solutions can be searched in a Lie group setting, if :math:`A(y)` is a matrix-valued element of the corresposnding Lie algebra.
+where :math:`A` is a matrix. The solutions can be searched in a Lie group setting, if :math:`A(y)` is a matrix-valued element of the corresponding Lie algebra.
 
 .. _Lie_Ex_Euler:
 
