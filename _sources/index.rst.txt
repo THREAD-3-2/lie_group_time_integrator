@@ -1,11 +1,14 @@
-===============================================
- Documentation of `Lie Group Time Integration`
-===============================================
+==============================================
+ Documentation of `Lie Group Time Integrator`
+==============================================
 
 `Lie group time integrator <https://github.com/THREAD-3-2/lie_group_time_integrator>`_
-is a MATLAB code for the analysis of Lie group time integrators such as Lie Forward Euler.
-The software is a joint work between Martin-Luther-University and NTNU.
-The main file is at `src/main.m`.
+is a MATLAB code for the analysis of Lie group time integrators.
+The main aim is to find out if the numerical flow is contractive for contractive systems.
+The code includes three one-step, one-stage Lie group integrators that come with the spherical pendulum as a test problem.
+
+The software is a joint work between `MLU <https://www.uni-halle.de/?lang=en>`_ and `NTNU <https://www.ntnu.edu/>`_.
+
 
 Contents
 ========
