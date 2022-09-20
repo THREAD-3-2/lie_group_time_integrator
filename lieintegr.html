@@ -37,16 +37,16 @@
             
   <section id="integration-methods">
 <span id="lieintegr"></span><h1>Integration methods<a class="headerlink" href="#integration-methods" title="Permalink to this heading">¶</a></h1>
-<blockquote>
-<div><p>Lie Integrators</p>
-</div></blockquote>
+<section id="lie-integrators">
+<h2>Lie Integrators<a class="headerlink" href="#lie-integrators" title="Permalink to this heading">¶</a></h2>
+<p>The following schemes solve systems of the form:</p>
 <div class="math notranslate nohighlight">
 \[\begin{align}
     \dot{y} = A(y)y
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(A\)</span> is a matrix. The solutions can be searched in a Lie group setting, if <span class="math notranslate nohighlight">\(A(y)\)</span> is a matrix-valued element of the corresponding Lie algebra.</p>
 <section id="lie-forward-euler">
-<span id="lie-ex-euler"></span><h2>Lie Forward Euler<a class="headerlink" href="#lie-forward-euler" title="Permalink to this heading">¶</a></h2>
+<span id="lie-ex-euler"></span><h3>Lie Forward Euler<a class="headerlink" href="#lie-forward-euler" title="Permalink to this heading">¶</a></h3>
 <p>The method can be expressed by the formula:</p>
 <div class="math notranslate nohighlight">
 \[\begin{align}
@@ -55,7 +55,7 @@
 <p>where <span class="math notranslate nohighlight">\(\exp\)</span> and <span class="math notranslate nohighlight">\(\circ\)</span> are respectively the exponential map and the action on the considered Lie group, and <span class="math notranslate nohighlight">\(h\)</span> is the time step size.</p>
 </section>
 <section id="lie-backward-euler">
-<span id="lie-im-euler"></span><h2>Lie Backward Euler<a class="headerlink" href="#lie-backward-euler" title="Permalink to this heading">¶</a></h2>
+<span id="lie-im-euler"></span><h3>Lie Backward Euler<a class="headerlink" href="#lie-backward-euler" title="Permalink to this heading">¶</a></h3>
 <p>Similar to the <cite>Lie Forward Euler</cite>, the <cite>Lie Backward Euler</cite> uses the operation on the considered Lie group to find the solution.
 Its scheme is:</p>
 <div class="math notranslate nohighlight">
@@ -65,7 +65,7 @@ Its scheme is:</p>
 <p>where, again, <span class="math notranslate nohighlight">\(\exp\)</span> and <span class="math notranslate nohighlight">\(\circ\)</span> are respectively the exponential map and the action on the considered Lie group, and <span class="math notranslate nohighlight">\(h\)</span> is the time step size.</p>
 </section>
 <section id="lie-midpoint-rule">
-<span id="lie-midpt"></span><h2>Lie Midpoint Rule<a class="headerlink" href="#lie-midpoint-rule" title="Permalink to this heading">¶</a></h2>
+<span id="lie-midpt"></span><h3>Lie Midpoint Rule<a class="headerlink" href="#lie-midpoint-rule" title="Permalink to this heading">¶</a></h3>
 <p>Finally, we used for comparison also a Midpoint Rule in the Lie group setting.
 The expression for this method is:</p>
 <div class="math notranslate nohighlight">
@@ -73,6 +73,7 @@ The expression for this method is:</p>
     y_{n+1} = \exp{(hA(\frac{y_{n+1}+y_{n}}{2}))}\circ y_{n}
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\exp\)</span> and <span class="math notranslate nohighlight">\(\circ\)</span> are respectively the exponential map and the action on the considered Lie group, and <span class="math notranslate nohighlight">\(h\)</span> is the time step size.</p>
+</section>
 </section>
 </section>
 
@@ -97,9 +98,7 @@ The expression for this method is:</p>
 <li class="toctree-l1"><a class="reference internal" href="howto.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sphpend.html">Example</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Integration methods</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#lie-forward-euler">Lie Forward Euler</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#lie-backward-euler">Lie Backward Euler</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#lie-midpoint-rule">Lie Midpoint Rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lie-integrators">Lie Integrators</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="matlab.html">MATLAB code</a></li>

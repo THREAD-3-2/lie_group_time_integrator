@@ -1,11 +1,11 @@
 .. _lieintegr:
 
-=================
+===================
 Integration methods
-=================
+===================
 
- Lie Integrators
-=================
+Lie Integrators
+================
 The following schemes solve systems of the form:
 
 .. math::
