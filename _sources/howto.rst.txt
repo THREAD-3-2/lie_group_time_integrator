@@ -1,6 +1,9 @@
 .. _howto:
 
 ===========
+Installation 
+===========
+
 How to use
 ===========
 
@@ -25,3 +28,26 @@ To examine the results, first use `readAll.m` to read the files in the folder `o
 Once `readAll.m` finishes, the results will be stored in two cell variables of size equal to the total number of solutions.
 The first cell variable contains the parameters of each solution run, while the second cell variable contains the matrices with the solution at each time step.
 The following functions are written to use the parameters and the solutions in the format given by the `readAll.m` script.
+
+
+Virtual environment
+===================
+
+If you have a supported Python installation on your computer, you can
+install the package in a virtual environment like so:
+
+.. code-block:: bash
+
+    # create a virtual environment (called venv)
+    python3 -m venv venv
+
+    # activate virtual environment
+    . ./venv/bin/activate
+    
+    # install packages listed in `requirements.txt`, e.g. sphinx
+    pip install -r requirements.txt
+    
+    # to build the documentation locally, run:
+    cd docs
+    make doctest # optionally check if your examples work
+    make html
