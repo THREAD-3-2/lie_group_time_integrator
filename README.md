@@ -1,4 +1,4 @@
-# lie_group_time_integrator
+# Lie group time integrator
 
 ![CI](https://github.com/THREAD-3-2/lie_group_time_integrator/workflows/CI/badge.svg)
 [![documentation](https://img.shields.io/badge/docs-passing-<COLOR>.svg)](https://THREAD-3-2.github.io/lie_group_time_integrator/)
